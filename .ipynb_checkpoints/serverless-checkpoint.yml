@@ -32,7 +32,7 @@ package:
     - (*).ipynb
 
 functions:
-  fmnist-classify:
+  resnet50-classify:
     handler: handler.fmnist_classifier
     memorySize: 2048
     timeout: 30
