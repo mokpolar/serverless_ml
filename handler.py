@@ -86,8 +86,8 @@ def fmnist_classifier(event, context):
 
         print('tmp_image_file loaded', tmp_image_file)
 
-        #img_object = s3.Bucket(UPLOAD_BUCKET_NAME).Object(image_key)
-        img_object = s3.Bucket('image-upload-mokpolar').Object('test.png')
+        img_object = s3.Bucket(UPLOAD_BUCKET_NAME).Object(image_key)
+        #img_object = s3.Bucket('image-upload-mokpolar').Object('test.png')
 
         print('img_object setted', img_object)
         
@@ -110,7 +110,7 @@ def fmnist_classifier(event, context):
 
         body['message'] = 'OK'
         body['predictions'] = data
-
+        
     response = {
         "statusCode": 200,
         "body": json.dumps(body),
